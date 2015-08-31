@@ -15,5 +15,5 @@ See documentation at
 Acknowledgments: This work is part of the National Alliance for Medical Image Computing (NA-MIC), funded by the National Institutes of Health through the NIH Roadmap for Medical Research, and by National Cancer Institute as part of the Quantitative Imaging Network initiative (U01CA154601) and QIICR (U24CA180918).
 
 ## References
-[QIBA Phantom](https://sites.duke.edu/dblab/qibacontent/)
-[Equations for Variable Flip Angle T1 Mapping](http://europepmc.org/articles/pmc3620726)
+1. [QIBA Phantom](https://sites.duke.edu/dblab/qibacontent/)
+2. [Equations for Variable Flip Angle T1 Mapping](http://europepmc.org/articles/pmc3620726)
