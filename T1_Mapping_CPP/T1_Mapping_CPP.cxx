@@ -462,7 +462,7 @@ int main( int argc, char * argv[])
   PARSE_ARGS;
 
   if((FAToInclude.size()>0) && (FAToExclude.size()>0)){
-    std::cerr << "ERROR: Either inclusion or exclusion b-values list can be specified, not both!" << std::endl;
+    std::cerr << "ERROR: Either inclusion or exclusion flip-angles list can be specified, not both!" << std::endl;
     return -1;
   }
 
@@ -494,9 +494,9 @@ int main( int argc, char * argv[])
 
   // Trigger times
   std::vector<float> FA;
-  // list of b-values to be passed to the optimizer
+  // list of flip-angles to be passed to the optimizer
   float *FAPtr, *imageValuesPtr;
-  // "true" for the b-value and measurement pair to be used in fitting
+  // "true" for the flip-angle and measurement pair to be used in fitting
   bool *FAMask;
   int FATotal, FASelected;
   try {
@@ -530,7 +530,7 @@ int main( int argc, char * argv[])
         }
       }
     } else {
-      // by default, all b-values will be used
+      // by default, all flip-angles will be used
       FASelected = FATotal;
       memset(FAMask,true,sizeof(bool)*FATotal);
     }
@@ -543,7 +543,7 @@ int main( int argc, char * argv[])
     FAPtr = new float[FASelected];
     imageValuesPtr = new float[FASelected];
     int j = 0;
-    std::cout << "Will use the following b-values: ";
+    std::cout << "Will use the following flip-angles: ";
     for(int i=0;i<FATotal;i++){
       if(FAMask[i]){
         std::cout << FA[i] << " ";
